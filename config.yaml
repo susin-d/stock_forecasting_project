@@ -1,0 +1,8 @@
+tickers: ['AAPL']
+model_params:
+  arima: {order: [5,1,0]}
+  sarima: {order: [1,1,1], seasonal_order: [1,1,1,12]}
+  lstm: {window: 30}
+paths:
+  raw_data: data/raw/
+  processed_data: data/processed/
