@@ -4,3 +4,27 @@ __pycache__/
 *.h5
 .env
 .DS_Store
+
+# Data files
+data/processed/
+*.csv
+*.xlsx
+
+# Model files
+models/
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store

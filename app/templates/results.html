@@ -2,9 +2,22 @@
 <html>
 <head>
     <title>Forecast Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Forecast Results</h1>
-    <!-- Results will be displayed here -->
+    <div class="container">
+        <h1>Forecast Results for {{ data.ticker }}</h1>
+        <div class="results">
+            <p><strong>Current Price:</strong> ${{ "%.2f"|format(data.current_price) }}</p>
+            <h2>Predicted Prices for Next 3 Days:</h2>
+            <ul>
+                {% for price in data.forecast %}
+                <li>Day {{ loop.index }}: ${{ "%.2f"|format(price) }}</li>
+                {% endfor %}
+            </ul>
+            <p><em>Note: This is a simplified forecast for educational purposes.</em></p>
+        </div>
+        <a href="/">Back to Home</a>
+    </div>
 </body>
 </html>
